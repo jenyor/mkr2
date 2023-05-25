@@ -1,11 +1,12 @@
 from django.shortcuts import render
 from .models import Recipe, Category
-from django.db import models
+
 
 def main(request):
     latest_recipes = Recipe.objects.order_by('-created_at')[:5]
     context = {'latest_recipes': latest_recipes}
     return render(request, 'main.html', context)
+
 
 def category_list(request):
     categories = Category.objects.all()

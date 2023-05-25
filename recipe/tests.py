@@ -55,4 +55,3 @@ class CategoryListViewTest(TestCase):
         self.assertContains(response, 'Category 1 - 2')
         self.assertContains(response, 'Category 2 - 1')
         self.assertContains(response, 'Category 3 - 0')
-
