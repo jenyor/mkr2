@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Category List</title>
+</head>
+<body>
+    <h1>Category List</h1>
+    <ul>
+    {% for category, recipe_count in category_recipe_counts.items %}
+        <li>
+            {{ category.name }} - {{ recipe_count }}
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
